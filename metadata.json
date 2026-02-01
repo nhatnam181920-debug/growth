@@ -1,0 +1,8 @@
+{
+  "name": "UniPath AI - 学生成长与职业助手",
+  "description": "基于 Gemini AI 的智能平台，帮助学生追踪成就、可视化成长、生成简历并匹配职业。",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
