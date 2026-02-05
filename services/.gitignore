@@ -1,0 +1,26 @@
+# Environment variables - 绝不提交到 Git  
+.env  
+.env.local  
+.env.*.local  
+# Dependencies  
+node_modules/  
+dist/  
+build/  
+# IDE  
+.vscode/  
+.idea/  
+*.swp  
+*.swo  
+*.sublime-project  
+*.sublime-workspace  
+# OS  
+.DS_Store  
+Thumbs.db  
+# Logs  
+*.log  
+npm-debug.log*  
+yarn-debug.log*  
+pnpm-debug.log*  
+# Temporary files  
+.temp/  
+tmp/  
