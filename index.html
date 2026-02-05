@@ -1,61 +1,76 @@
-
-<!DOCTYPE html>
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UniPath AI - 学生成长助手</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- 引入 html2pdf.js 用于真正导出 PDF 文件 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');
+<!DOCTYPE html>  
+<html lang="zh-CN">  
+  <head>  
+    <meta charset="UTF-8" />  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />  
+    <!-- 安全头部 - 防止 XSS 和点击劫持 -->  
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:;">  
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />  
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />  
       
-      body {
-        font-family: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
-        background-color: #F5F5F7;
-        color: #1D1D1F;
-        -webkit-font-smoothing: antialiased;
-      }
-
-      /* Apple-style thin scrollbar */
-      ::-webkit-scrollbar {
-        width: 5px;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #d1d1d6;
-        border-radius: 10px;
-      }
-      ::-webkit-scrollbar-thumb:hover {
-        background: #8e8e93;
-      }
-
-      /* Print optimization */
-      @media print {
-        body { background: white !important; }
-        .no-print { display: none !important; }
-        .print-only { display: block !important; }
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://aistudiocdn.com/react@^19.2.1/",
-    "react": "https://aistudiocdn.com/react@^19.2.1",
-    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
-    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",
-    "recharts": "https://aistudiocdn.com/recharts@^3.5.1"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
-  <body>
-    <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
-</body>
-</html>
+    <title>UniPath AI - 学生成长助手</title>  
+      
+    <!-- Tailwind CSS with SRI (Subresource Integrity) -->  
+    <script   
+      src="https://cdn.tailwindcss.com"  
+      integrity="sha384-L3ztHCnC4Oc0N5Z7rS0dluJfKekLezVZN/c3I7g5DsfJtcci3B0nW5UtMneg2ZQ"  
+      crossorigin="anonymous"  
+    ></script>  
+      
+    <!-- html2pdf.js with SRI -->  
+    <script   
+      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"  
+      integrity="sha512-GsLlZN/3F2ErC5ZdVQl8sDmtsE33KojVHZeDck+jhlVMQWLucyopp+uk1FmI+gHvB1LBvIJlGlzDkN0ch+2FQ=="  
+      crossorigin="anonymous"  
+    ></script>  
+      
+    <style>  
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');  
+        
+      body {  
+        font-family: 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;  
+        background-color: #F5F5F7;  
+        color: #1D1D1F;  
+        -webkit-font-smoothing: antialiased;  
+      }  
+      /* Apple-style thin scrollbar */  
+      ::-webkit-scrollbar {  
+        width: 5px;  
+      }  
+      ::-webkit-scrollbar-track {  
+        background: transparent;  
+      }  
+      ::-webkit-scrollbar-thumb {  
+        background: #d1d1d6;  
+        border-radius: 10px;  
+      }  
+      ::-webkit-scrollbar-thumb:hover {  
+        background: #8e8e93;  
+      }  
+      /* Print optimization */  
+      @media print {  
+        body { background: white !important; }  
+        .no-print { display: none !important; }  
+        .print-only { display: block !important; }  
+      }  
+    </style>  
+  <script type="importmap">  
+{  
+  "imports": {  
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",  
+    "react": "https://aistudiocdn.com/react@^19.2.1",  
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",  
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",  
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.31.0",  
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.1"  
+  }  
+}  
+</script>  
+<link rel="stylesheet" href="/index.css">  
+</head>  
+  <body>  
+    <div id="root"></div>  
+  <script type="module" src="/index.tsx"></script>  
+</body>  
+</html>  
