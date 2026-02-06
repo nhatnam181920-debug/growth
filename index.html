@@ -5,22 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />  
     <!-- 安全头部 - 防止 XSS 和点击劫持 -->  
-   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https:;">  
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https:; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://cdn.jsdelivr.net https://qukufjigazwwrhtgiesu.supabase.co; style-src 'self' 'unsafe-inline' https://cdn.tailwindcss.com https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://qukufjigazwwrhtgiesu.supabase.co https://*.supabase.co https:; frame-ancestors 'self';">    
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />  
-    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />  
       
     <title>UniPath AI - 学生成长助手</title>  
       
     <!-- Tailwind CSS with SRI (Subresource Integrity) -->  
     <script src="https://cdn.tailwindcss.com"></script> 
-    ></script>  
       
     <!-- html2pdf.js with SRI -->  
-    <script   
-      src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"  
-      integrity="sha512-GsLlZN/3F2ErC5ZdVQl8sDmtsE33KojVHZeDck+jhlVMQWLucyopp+uk1FmI+gHvB1LBvIJlGlzDkN0ch+2FQ=="  
-      crossorigin="anonymous"  
-    ></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>  
+
       
     <style>  
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap');  
