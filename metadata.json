@@ -1,0 +1,5 @@
+{
+  "name": "青网站 - 学生成长与职业助手",
+  "description": "基于 AI 的学生成长档案平台，支持成果上传、成长可视化、个性化实习履历与精准实习匹配。",
+  "requestFramePermissions": ["camera", "microphone"]
+}

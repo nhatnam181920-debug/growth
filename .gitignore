@@ -1,0 +1,8 @@
+node_modules/
+dist/
+vite.log
+*.log
+migrated_prompt_history/
+.env
+.env.local
+.env.*.local
